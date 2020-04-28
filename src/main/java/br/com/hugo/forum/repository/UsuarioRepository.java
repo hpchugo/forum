@@ -1,0 +1,13 @@
+package br.com.hugo.forum.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.hugo.forum.modelo.Usuario;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+	
+	Optional<Usuario> findByEmail(String email);
+
+}
